@@ -32,19 +32,21 @@
             total_price()
         })
     }
-    var trash_btn = document.getElementsByClassName("fa-trash-alt")
+    
     for (let j=0; j<=trash_btn.length-1; j++){
         trash_btn[j].addEventListener("click", function(){
             card_remove[j].remove()
+            count[j].innerText=0
+            total_price()
         })
     }
     var likes = document.getElementsByClassName("fas fa-heart")
-    for (let j=0; j<= likes.length-1; j++){
-        likes[j].addEventListener("click", function(){
-            if (likes[j].style.color != "red")
-            likes[j].style.color = "red"
+    for (let i=0; i<= likes.length; i++){
+        likes[i].addEventListener("click", function(){
+            if (likes[i].style.color != "red")
+            likes[i].style.color = "red"
             else {
-                likes[j].style.color = "grey"
+                likes[i].style.color = "grey"
             }
         })
     }
